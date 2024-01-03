@@ -1,5 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+<!--    색상 안먹히면 아래 코드로 수정-->
+<!--    <style name="Base.Theme.Bts_lecture" parent="Theme.AppCompat.Light">-->
     <style name="Base.Theme.Bts_lecture" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
