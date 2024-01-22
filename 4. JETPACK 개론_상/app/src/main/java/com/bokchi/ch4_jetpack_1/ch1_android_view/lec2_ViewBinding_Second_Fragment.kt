@@ -10,7 +10,7 @@ import com.bokchi.ch4_jetpack_1.databinding.FragmentLec2ViewBindingSecondBinding
 
 
 /**
- * Fragment에서 ViewBinding 사용 방법
+ * Fragment에서 ViewBinding 사w용 방법
  */
 class lec2_ViewBinding_Second_Fragment : Fragment() {
 
