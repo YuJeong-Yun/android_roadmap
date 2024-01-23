@@ -3,9 +3,12 @@ package com.bokchi.ch4_jetpack_1.ch1_android_view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.bokchi.ch4_jetpack_1.R
 import com.bokchi.ch4_jetpack_1.databinding.ActivityLec3DataBindingBinding
+import kotlin.math.log
 
 /**
  * DataBinding 사용 방법
@@ -21,6 +24,7 @@ buildFeatures {
 class lec3_DataBinding : AppCompatActivity() {
 
     private lateinit var binding: ActivityLec3DataBindingBinding
+    var testCount = 20
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,5 +38,19 @@ class lec3_DataBinding : AppCompatActivity() {
             val intent = Intent(this, lec3_DataBinding_Second::class.java)
             startActivity(intent)
         }
+
+        // databinding 데이터 결합
+        val person = Person("홍길동", 20)
+        binding.user = person
+
+
+    }
+
+    fun myClick(view: View) {
+        Log.e("myclick", "click")
+        testCount++
+
+        val person = Person("홍길동", testCount)
+        binding.user = person
     }
 }
