@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Ch4_JETPACK_1"
         tools:targetApi="31">
         <activity
+            android:name=".ch3_LiveData_ViewModel.lec2_LiveData_ViewModel"
+            android:exported="false" />
+        <activity
+            android:name=".ch3_LiveData_ViewModel.lec1_LiveData_Activity"
+            android:exported="false" />
+        <activity
             android:name=".ch2_View_ViewModel.lec5_MainActivity"
             android:exported="false" />
         <activity
