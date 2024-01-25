@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Ch4_JETPACK_1"
         tools:targetApi="31">
         <activity
-            android:name=".ch3_LiveData_ViewModel.lec6_Switch_Map_Activity"
+            android:name=".ch3_LiveData_ViewModel.lec7_ViewModel_LiveData_LifeCycleOwner_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ch3_LiveData_ViewModel.lec6_Switch_Map_Activity"
+            android:exported="false" />
+
         <activity
             android:name=".ch3_LiveData_ViewModel.lec4_Fragment_LiveData_LifeCycleOwner1_Activity"
             android:exported="false" />
