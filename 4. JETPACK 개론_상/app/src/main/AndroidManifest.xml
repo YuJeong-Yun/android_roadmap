@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Ch4_JETPACK_1"
         tools:targetApi="31">
         <activity
-            android:name=".ch4_retrofit.lec8_Retrofit_ViewModelScope_RecyclerView_Glide_Activity"
+            android:name=".ch4_retrofit.lec9_Retrofit_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ch4_retrofit.lec8_Retrofit_ViewModelScope_RecyclerView_Glide_Activity"
+            android:exported="false" />
         <activity
             android:name=".ch4_retrofit.lec7_Retrofit_RecyclerView_Activity"
             android:exported="false" />
