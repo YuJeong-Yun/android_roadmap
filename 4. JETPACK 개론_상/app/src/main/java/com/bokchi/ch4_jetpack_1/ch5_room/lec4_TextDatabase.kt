@@ -5,10 +5,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [lec4_TextEntity::class], version = 1)
+@Database(entities = [lec4_TextEntity::class, lec6_WordEntity::class], version = 2)
 abstract class lec4_TextDatabase : RoomDatabase() {
 
     abstract fun textDao(): lec4_TextDAO
+    abstract fun wordDao(): lec6_WordDAO
 
     companion object {
         @Volatile
