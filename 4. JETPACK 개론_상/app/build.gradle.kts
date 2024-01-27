@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-//    id("kotlin-android-extensions")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -25,6 +25,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        getByName("debug") {
+            sourceSets {
+                getByName("main") {
+                    java.srcDir(File("build/generated/ksp/debug/kotlin"))
+                }
+            }
         }
     }
     compileOptions {
@@ -54,7 +61,17 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation("com.github.bumptech.glide:glide:4.13.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
+    // ROOM
+    val room_version = "2.5.0"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    // To use Kotlin Symbol Processing (KSP)
+    ksp("androidx.room:room-compiler:$room_version")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
 }
