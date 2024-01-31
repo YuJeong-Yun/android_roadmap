@@ -13,10 +13,7 @@ class lec5_WorkManager2(context: Context, params: WorkerParameters) :
     CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
 
-        withContext(Dispatchers.IO) {
-            test1()
-            test2()
-        }
+
 
 
         return Result.success()
