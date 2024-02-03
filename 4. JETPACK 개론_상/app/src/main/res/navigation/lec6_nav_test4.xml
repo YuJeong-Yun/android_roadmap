@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lec6_nav_test_4"
+    app:startDestination="@id/lec6_Navigation_BlankFragment1">
+
+    <fragment
+        android:id="@+id/lec6_Navigation_BlankFragment1"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec6_Navigation_BlankFragment1"
+        android:label="fragment_lec6__navigation__blank1"
+        tools:layout="@layout/fragment_lec6__navigation__blank1" >
+        <action
+            android:id="@+id/action_lec6_Navigation_BlankFragment1_to_lec6_Navigation_BlankFragment2"
+            app:destination="@id/lec6_Navigation_BlankFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/lec6_Navigation_BlankFragment2"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec6_Navigation_BlankFragment2"
+        android:label="fragment_lec6__navigation__blank2"
+        tools:layout="@layout/fragment_lec6__navigation__blank2" >
+        <action
+            android:id="@+id/action_lec6_Navigation_BlankFragment2_to_lec6_Navigation_BlankFragment1"
+            app:destination="@id/lec6_Navigation_BlankFragment1" />
+    </fragment>
+</navigation>
