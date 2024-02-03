@@ -9,7 +9,7 @@
         android:id="@+id/lec2_BlankFragment1"
         android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec2_BlankFragment1"
         android:label="fragment_lec2__blank1"
-        tools:layout="@layout/fragment_lec2__blank1" >
+        tools:layout="@layout/fragment_lec2__blank1">
         <action
             android:id="@+id/action_lec2_BlankFragment1_to_lec2_BlankFragment2"
             app:destination="@id/lec2_BlankFragment2" />
@@ -18,9 +18,37 @@
         android:id="@+id/lec2_BlankFragment2"
         android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec2_BlankFragment2"
         android:label="fragment_lec2__blank2"
-        tools:layout="@layout/fragment_lec2__blank2" >
+        tools:layout="@layout/fragment_lec2__blank2">
         <action
-            android:id="@+id/action_lec2_BlankFragment2_to_lec2_BlankFragment1"
+            android:id="@+id/action_lec2_BlankFragment2_to_lec3_BlankFragment3"
+            app:destination="@id/lec3_BlankFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/lec3_BlankFragment3"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec3_BlankFragment3"
+        android:label="fragment_lec3__blank3"
+        tools:layout="@layout/fragment_lec3__blank3">
+        <action
+            android:id="@+id/action_lec3_BlankFragment3_to_lec3_BlankFragment4"
+            app:destination="@id/lec3_BlankFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/lec3_BlankFragment4"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec3_BlankFragment4"
+        android:label="fragment_lec3__blank4"
+        tools:layout="@layout/fragment_lec3__blank4">
+        <action
+            android:id="@+id/action_lec3_BlankFragment4_to_lec3_BlankFragment5"
+            app:destination="@id/lec3_BlankFragment5"
+            app:popUpTo="@id/lec2_BlankFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/lec3_BlankFragment5"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec3_BlankFragment5"
+        android:label="fragment_lec3__blank5"
+        tools:layout="@layout/fragment_lec3__blank5">
+        <action
+            android:id="@+id/action_lec3_BlankFragment5_to_lec2_BlankFragment1"
             app:destination="@id/lec2_BlankFragment1" />
     </fragment>
 </navigation>

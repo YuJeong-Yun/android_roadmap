@@ -9,12 +9,8 @@ import android.widget.Button
 import androidx.navigation.Navigation
 import com.bokchi.ch4_jetpack_1.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-class lec2_BlankFragment2 : Fragment() {
+class lec3_BlankFragment4 : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,11 +22,11 @@ class lec2_BlankFragment2 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val view = inflater.inflate(R.layout.fragment_lec2__blank2, container, false)
+        val view = inflater.inflate(R.layout.fragment_lec3__blank4, container, false)
 
-        view.findViewById<Button>(R.id.btn2).setOnClickListener {
+        view.findViewById<Button>(R.id.btn4).setOnClickListener {
             Navigation.findNavController(view)
-                .navigate(R.id.action_lec2_BlankFragment2_to_lec3_BlankFragment3)
+                .navigate(R.id.action_lec3_BlankFragment4_to_lec3_BlankFragment5)
         }
 
         return view
