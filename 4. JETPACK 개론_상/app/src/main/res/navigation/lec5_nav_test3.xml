@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lec5_nav_test"
+    app:startDestination="@id/lec5_Navigation_BlankFragment1">
+
+    <fragment
+        android:id="@+id/lec5_Navigation_BlankFragment1"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec5_Navigation_BlankFragment1"
+        android:label="fragment_lec5__navigation__blank1"
+        tools:layout="@layout/fragment_lec5__navigation__blank1">
+        <action
+            android:id="@+id/action_lec5_Navigation_BlankFragment1_to_lec5_Navigation_BlankFragment2"
+            app:destination="@id/lec5_Navigation_BlankFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/lec5_Navigation_BlankFragment2"
+        android:name="com.bokchi.ch4_jetpack_1.ch7_navigation.lec5_Navigation_BlankFragment2"
+        android:label="fragment_lec5__navigation__blank2"
+        tools:layout="@layout/fragment_lec5__navigation__blank2">
+        <action
+            android:id="@+id/action_lec5_Navigation_BlankFragment2_to_lec5_Navigation_BlankFragment1"
+            app:destination="@id/lec5_Navigation_BlankFragment1" />
+        <argument
+            android:name="key"
+            app:argType="string"
+            android:defaultValue="디폴트값" />
+    </fragment>
+</navigation>
