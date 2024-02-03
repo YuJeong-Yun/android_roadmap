@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Ch4_JETPACK_1"
         tools:targetApi="31">
         <activity
-            android:name=".ch7_navigation.lec3_Navigtaion_Back_Button_Event_Activity"
+            android:name=".ch7_navigation.lec4_Navigation_Data_Transfer_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ch7_navigation.lec3_Navigtaion_Back_Button_Event_Activity"
+            android:exported="false" />
         <activity
             android:name=".ch7_navigation.lec2_Navigation_Simple_Graph_Activity"
             android:exported="false" />
