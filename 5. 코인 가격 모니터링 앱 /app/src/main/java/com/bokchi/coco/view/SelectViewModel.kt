@@ -17,7 +17,6 @@ class SelectViewModel : ViewModel() {
 
     private lateinit var currentPriceResultList : ArrayList<CurrentPriceResult>
 
-    // 데이터변화를 관찰 LiveData
     private val _currentPriceResult = MutableLiveData<List<CurrentPriceResult>>()
     val currentPriceResult : LiveData<List<CurrentPriceResult>>
         get() = _currentPriceResult
@@ -31,22 +30,6 @@ class SelectViewModel : ViewModel() {
         for(coin in result.data) {
 
             // 데이터가 CurrentPrice이 아닐 경우를 위한 예외 처리 (마지막 데이터가 조금 다름)
-            try {
-                val gson = Gson()
-                val gsonToJson = gson.toJson(result.data.get(coin.key))
-                val gsonFromJson = gson.fromJson(gsonToJson, CurrentPrice::class.java)
-
-                val currentPriceResult = CurrentPriceResult(coin.key, gsonFromJson)
-
-                currentPriceResultList.add(currentPriceResult)
-
-            }catch (e : java.lang.Exception) {
-                Timber.d(e.toString())
-            }
-
-        }
-        for(coin in result.data) {
-
             try {
                 val gson = Gson()
                 val gsonToJson = gson.toJson(result.data.get(coin.key))
