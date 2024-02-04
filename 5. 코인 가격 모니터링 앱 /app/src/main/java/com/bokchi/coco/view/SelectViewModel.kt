@@ -30,6 +30,7 @@ class SelectViewModel : ViewModel() {
 
         for(coin in result.data) {
 
+            // 데이터가 CurrentPrice이 아닐 경우를 위한 예외 처리 (마지막 데이터가 조금 다름)
             try {
                 val gson = Gson()
                 val gsonToJson = gson.toJson(result.data.get(coin.key))
