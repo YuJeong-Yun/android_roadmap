@@ -10,6 +10,7 @@ import com.bokchi.coco.databinding.ActivitySelectBinding
 import com.bokchi.coco.view.adapter.SelectRVAdapter
 import timber.log.Timber
 
+// 현재가 정보 조회 api
 // https://apidocs.bithumb.com/reference/%ED%98%84%EC%9E%AC%EA%B0%80-%EC%A0%95%EB%B3%B4-%EC%A1%B0%ED%9A%8C-all
 
 class SelectActivity : AppCompatActivity() {

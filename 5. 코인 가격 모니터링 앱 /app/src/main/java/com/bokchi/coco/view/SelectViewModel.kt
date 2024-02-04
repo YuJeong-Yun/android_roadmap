@@ -48,5 +48,4 @@ class SelectViewModel : ViewModel() {
         _currentPriceResult.value = currentPriceResultList
 
     }
-
 }
