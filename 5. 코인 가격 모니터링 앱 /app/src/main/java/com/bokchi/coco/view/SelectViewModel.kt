@@ -44,6 +44,22 @@ class SelectViewModel : ViewModel() {
             }
 
         }
+        for(coin in result.data) {
+
+            try {
+                val gson = Gson()
+                val gsonToJson = gson.toJson(result.data.get(coin.key))
+                val gsonFromJson = gson.fromJson(gsonToJson, CurrentPrice::class.java)
+
+                val currentPriceResult = CurrentPriceResult(coin.key, gsonFromJson)
+
+                currentPriceResultList.add(currentPriceResult)
+
+            }catch (e : java.lang.Exception) {
+                Timber.d(e.toString())
+            }
+
+        }
 
         _currentPriceResult.value = currentPriceResultList
 

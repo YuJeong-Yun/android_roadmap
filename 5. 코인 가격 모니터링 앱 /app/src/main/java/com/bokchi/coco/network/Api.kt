@@ -8,5 +8,4 @@ interface Api {
     // public/ticker/ALL_KRW
     @GET("public/ticker/ALL_KRW")
     suspend fun getCurrentCoinList() : CurrentPriceList
-
 }
