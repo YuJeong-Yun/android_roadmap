@@ -16,7 +16,7 @@ class IntroViewModel : ViewModel() {
         get() = _first
 
     fun checkFirstFlag() = viewModelScope.launch {
-        delay(2000)
+        delay(2000) // 로티 애니메이션 오래 보여주기 위해 준 딜레이
 
         val getData = MyDataStore().getFirstData()
 
