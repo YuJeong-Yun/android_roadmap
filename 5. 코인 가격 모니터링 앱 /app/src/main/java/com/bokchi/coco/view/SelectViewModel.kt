@@ -27,6 +27,12 @@ class SelectViewModel : ViewModel() {
     val currentPriceResult: LiveData<List<CurrentPriceResult>>
         get() = _currentPriceResult
 
+    private val _saved = MutableLiveData<String>()
+    val saved: LiveData<String>
+        get() = _saved
+
+
+
     fun getCurrentCoinList() = viewModelScope.launch {
 
         val result = netWorkRepository.getCurrentCoinList()
@@ -96,9 +102,9 @@ class SelectViewModel : ViewModel() {
 
             }
 
-//            withContext(Dispatchers.Main) {
-//                _saved.value = "done"
-//            }
+            withContext(Dispatchers.Main) {
+                _saved.value = "done" // db에 코인 업데이트 작업 완료 후에 다음 작업으로 넘어가려고
+            }
 
         }
 }

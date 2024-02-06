@@ -48,5 +48,12 @@ class SelectActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        viewModel.saved.observe(this, Observer {
+            if (it.equals("done")) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+        })
     }
 }
