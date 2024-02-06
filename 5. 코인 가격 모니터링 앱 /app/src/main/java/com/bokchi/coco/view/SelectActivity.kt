@@ -40,9 +40,11 @@ class SelectActivity : AppCompatActivity() {
             Timber.d(it.toString())
         })
 
-        // 실행 시 첫 방문 Flag=true DataModel에 값 저장
-        viewModel.setUpFirstFlag()
         binding.laterTextArea.setOnClickListener {
+            // 실행 시 첫 방문 Flag=true DataModel에 값 저장
+            viewModel.setUpFirstFlag()
+            viewModel.saveSelectedCoinList(selectRVAdapter.selectedCoinList)
+
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

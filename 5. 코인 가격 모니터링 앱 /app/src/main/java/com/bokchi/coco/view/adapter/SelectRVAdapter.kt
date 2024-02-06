@@ -16,7 +16,7 @@ class SelectRVAdapter(val context : Context, val coinPriceList : List<CurrentPri
     :RecyclerView.Adapter<SelectRVAdapter.ViewHolder>(){
 
     // 좋아요한 코인 목록 담을 리스트
-    private val selectedCoinList = ArrayList<String>()
+    val selectedCoinList = ArrayList<String>()
 
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val coinName : TextView = view.findViewById(R.id.coinName)
