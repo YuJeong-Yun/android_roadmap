@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bokchi.coco.dataModel.CurrentPrice
 import com.bokchi.coco.dataModel.CurrentPriceResult
+import com.bokchi.coco.dataStore.MyDataStore
 import com.bokchi.coco.repository.NetWorkRepository
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
@@ -15,10 +16,10 @@ class SelectViewModel : ViewModel() {
 
     private val netWorkRepository = NetWorkRepository()
 
-    private lateinit var currentPriceResultList : ArrayList<CurrentPriceResult>
+    private lateinit var currentPriceResultList: ArrayList<CurrentPriceResult>
 
     private val _currentPriceResult = MutableLiveData<List<CurrentPriceResult>>()
-    val currentPriceResult : LiveData<List<CurrentPriceResult>>
+    val currentPriceResult: LiveData<List<CurrentPriceResult>>
         get() = _currentPriceResult
 
     fun getCurrentCoinList() = viewModelScope.launch {
@@ -27,7 +28,7 @@ class SelectViewModel : ViewModel() {
 
         currentPriceResultList = ArrayList()
 
-        for(coin in result.data) {
+        for (coin in result.data) {
 
             // 데이터가 CurrentPrice이 아닐 경우를 위한 예외 처리 (마지막 데이터가 조금 다름)
             try {
@@ -39,13 +40,16 @@ class SelectViewModel : ViewModel() {
 
                 currentPriceResultList.add(currentPriceResult)
 
-            }catch (e : java.lang.Exception) {
+            } catch (e: java.lang.Exception) {
                 Timber.d(e.toString())
             }
-
         }
 
         _currentPriceResult.value = currentPriceResultList
 
+    }
+
+    fun setUpFirstFlag() = viewModelScope.launch {
+        MyDataStore().setupFirstData()
     }
 }

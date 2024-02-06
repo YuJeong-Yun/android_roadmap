@@ -2,6 +2,7 @@ package com.bokchi.coco.view.intro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bokchi.coco.R
 import timber.log.Timber
@@ -15,6 +16,8 @@ import timber.log.Timber
  */
 class IntroActivity : AppCompatActivity() {
 
+    private val viewModel: IntroViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // 인트로 액티비티에 아래 코드 추가
         installSplashScreen()
@@ -24,5 +27,6 @@ class IntroActivity : AppCompatActivity() {
 
         Timber.d("onCreate")
 
+        viewModel.checkFirstFlag()
     }
 }
