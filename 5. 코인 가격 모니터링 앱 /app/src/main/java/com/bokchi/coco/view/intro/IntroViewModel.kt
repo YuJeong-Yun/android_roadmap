@@ -16,7 +16,6 @@ class IntroViewModel : ViewModel() {
         get() = _first
 
     fun checkFirstFlag() = viewModelScope.launch {
-
         delay(2000)
 
         val getData = MyDataStore().getFirstData()
@@ -26,5 +25,4 @@ class IntroViewModel : ViewModel() {
         Timber.d(getData.toString())
 
     }
-
 }
