@@ -15,4 +15,5 @@
         android:name="com.bokchi.coco.view.main.PriceChangeFragment"
         android:label="fragment_price_change"
         tools:layout="@layout/fragment_price_change" />
+
 </navigation>
