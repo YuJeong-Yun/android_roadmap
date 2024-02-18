@@ -7,9 +7,8 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
-import com.bokchi.coco.MainActivity
-import com.bokchi.coco.R
 import com.bokchi.coco.databinding.ActivityIntroBinding
+import com.bokchi.coco.view.main.MainActivity
 import timber.log.Timber
 
 /**

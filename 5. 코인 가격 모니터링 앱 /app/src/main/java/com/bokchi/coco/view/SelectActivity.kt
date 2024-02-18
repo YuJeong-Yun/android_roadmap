@@ -6,10 +6,9 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bokchi.coco.MainActivity
-import com.bokchi.coco.R
 import com.bokchi.coco.databinding.ActivitySelectBinding
 import com.bokchi.coco.view.adapter.SelectRVAdapter
+import com.bokchi.coco.view.main.MainActivity
 import timber.log.Timber
 
 // 현재가 정보 조회 api
