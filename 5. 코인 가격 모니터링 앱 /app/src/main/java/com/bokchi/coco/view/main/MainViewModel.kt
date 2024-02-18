@@ -16,21 +16,13 @@ class MainViewModel : ViewModel() {
     lateinit var selectedCoinList : LiveData<List<InterestCoinEntity>>
 
     // CoinListFragment
-
     fun getAllInterestCoinData() = viewModelScope.launch {
-
         val coinList = dbRepository.getAllInterestCoinData().asLiveData()
         selectedCoinList = coinList
-
     }
 
     fun updateInterestCoinData(interestCoinEntity: InterestCoinEntity) = viewModelScope.launch(Dispatchers.IO) {
-
-        if(interestCoinEntity.selected) {
-            interestCoinEntity.selected = false
-        } else {
-            interestCoinEntity.selected = true
-        }
+        interestCoinEntity.selected = !interestCoinEntity.selected
 
         dbRepository.updateInterestCoinData(interestCoinEntity)
 
