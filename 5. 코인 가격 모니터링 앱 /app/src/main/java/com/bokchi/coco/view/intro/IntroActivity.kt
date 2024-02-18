@@ -34,6 +34,7 @@ class IntroActivity : AppCompatActivity() {
         Timber.d("onCreate")
 
         viewModel.checkFirstFlag()
+        // dataStore에서 값을 가져오는 게 비동기식으로 실행되므로, observe를 통해 실행되도록 했음
         viewModel.first.observe(this, Observer {
             if (it) {
                 // 처음 접속하는 유저가 아님
